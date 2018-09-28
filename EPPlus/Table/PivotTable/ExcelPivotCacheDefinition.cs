@@ -35,6 +35,8 @@ using System.Text;
 using System.Xml;
 using System.Linq;
 using OfficeOpenXml.Utils;
+using System.Diagnostics;
+
 namespace OfficeOpenXml.Table.PivotTable
 {
     public enum eSourceType
@@ -220,7 +222,7 @@ namespace OfficeOpenXml.Table.PivotTable
                     }
                     else
                     {
-                        throw (new ArgumentException("The cachesource is not a worksheet"));
+                        Debug.WriteLine("The cachesource is not a worksheet");
                     }
                 }
                 return _sourceRange;

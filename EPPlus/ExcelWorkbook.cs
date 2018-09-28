@@ -1006,7 +1006,12 @@ namespace OfficeOpenXml
 
 		private void SetNameElement(ExcelNamedRange name, XmlElement elem)
 		{
-			if (name.IsName)
+            //TODO: ????
+            if (name.IsTable)
+            {
+                elem.InnerText = name.FirstAddress;
+            }
+            else if (name.IsName)
 			{
 				if (string.IsNullOrEmpty(name.NameFormula))
 				{

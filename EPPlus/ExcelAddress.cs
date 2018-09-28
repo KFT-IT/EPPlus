@@ -477,6 +477,16 @@ namespace OfficeOpenXml
         /// <summary>
         /// If the address is a defined name
         /// </summary>
+        public bool IsTable
+        {
+            get
+            {
+                return _address.EndsWith("[]");
+            }
+        }
+        /// <summary>
+        /// If the address is a defined name
+        /// </summary>
         public bool IsName
         {
             get
